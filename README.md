@@ -16,6 +16,7 @@ was changed and why:
 - Allow incoming calls from the call indication
 - Enable IMS again when the radio comes back
 - Mark the caller number as presentable
+- Keep the dialed number on outgoing calls
 
 `build.sh` rebuilds `ImsService.apk` from this tree. It has to be signed
 with the ROM's platform key.
@@ -48,7 +49,8 @@ RIL and overlay changes in the device trees.
 - ImsService updates built from this repo:
   [66bf2de](https://github.com/coolpadnote3litedevelopment/proprietary_vendor_coolpad/commit/66bf2debebcf566afcff9899b685fde0b93dc6e3),
   [24eb791](https://github.com/coolpadnote3litedevelopment/proprietary_vendor_coolpad/commit/24eb791247fe1366207b21c392d1e6ff03e9325c),
-  [4513964](https://github.com/coolpadnote3litedevelopment/proprietary_vendor_coolpad/commit/45139646a9eed89c391ae3e7207fd13d478808f7)
+  [4513964](https://github.com/coolpadnote3litedevelopment/proprietary_vendor_coolpad/commit/45139646a9eed89c391ae3e7207fd13d478808f7),
+  [dddf74b](https://github.com/coolpadnote3litedevelopment/proprietary_vendor_coolpad/commit/dddf74bcac5a1c4785e8c3317b440add8765f54f)
 
 ## What each piece is for
 
