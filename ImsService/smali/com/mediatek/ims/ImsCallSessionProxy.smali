@@ -2014,7 +2014,7 @@
     const/high16 v2, 0x10000
 
     :try_start_49
-    invoke-interface {v1, v2}, Lcom/android/ims/internal/IImsVideoCallProvider;->setUIMode(I)V
+    invoke-static {v1, v2}, Lcom/mediatek/ims/compat/ImsCompat;->setUIMode(Lcom/android/ims/internal/IImsVideoCallProvider;I)V
 
     .line 302
     const/4 v2, 0x0

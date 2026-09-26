@@ -849,7 +849,7 @@
     if-ne v5, v1, :cond_6c
 
     .line 452
-    invoke-static {v4}, Landroid/telephony/SubscriptionManager;->getSubIdUsingPhoneId(I)I
+    invoke-static {v4}, Lcom/mediatek/ims/compat/ImsCompat;->getSubIdUsingPhoneId(I)I
 
     move-result v7
 
@@ -2922,7 +2922,7 @@
 
     .line 699
     .local v6, "pos":I
-    invoke-static {p2}, Landroid/telephony/SubscriptionManager;->getSubIdUsingPhoneId(I)I
+    invoke-static {p2}, Lcom/mediatek/ims/compat/ImsCompat;->getSubIdUsingPhoneId(I)I
 
     move-result v7
 

@@ -1349,7 +1349,7 @@
 
     move-result-object v3
 
-    invoke-interface {v1, v2, v3}, Lcom/android/ims/internal/IImsCallSessionListener;->callSessionPauInfoChanged(Lcom/android/ims/internal/IImsCallSession;Lcom/android/ims/ImsCallProfile;)V
+    invoke-static {v1, v2, v3}, Lcom/mediatek/ims/compat/ImsCompat;->callSessionPauInfoChanged(Lcom/android/ims/internal/IImsCallSessionListener;Lcom/android/ims/internal/IImsCallSession;Lcom/android/ims/ImsCallProfile;)V
     :try_end_21
     .catch Landroid/os/RemoteException; {:try_start_10 .. :try_end_21} :catch_22
 
@@ -3907,7 +3907,7 @@
     move-result-object v5
 
     .line 1529
-    invoke-interface {v2, v3, v5}, Lcom/android/ims/internal/IImsCallSessionListener;->callSessionPauInfoChanged(Lcom/android/ims/internal/IImsCallSession;Lcom/android/ims/ImsCallProfile;)V
+    invoke-static {v2, v3, v5}, Lcom/mediatek/ims/compat/ImsCompat;->callSessionPauInfoChanged(Lcom/android/ims/internal/IImsCallSessionListener;Lcom/android/ims/internal/IImsCallSession;Lcom/android/ims/ImsCallProfile;)V
     :try_end_4ac
     .catch Landroid/os/RemoteException; {:try_start_495 .. :try_end_4ac} :catch_4ae
 
@@ -4055,7 +4055,7 @@
     move-result-object v5
 
     .line 1554
-    invoke-interface {v2, v3, v5}, Lcom/android/ims/internal/IImsCallSessionListener;->callSessionPauInfoChanged(Lcom/android/ims/internal/IImsCallSession;Lcom/android/ims/ImsCallProfile;)V
+    invoke-static {v2, v3, v5}, Lcom/mediatek/ims/compat/ImsCompat;->callSessionPauInfoChanged(Lcom/android/ims/internal/IImsCallSessionListener;Lcom/android/ims/internal/IImsCallSession;Lcom/android/ims/ImsCallProfile;)V
     :try_end_52c
     .catch Landroid/os/RemoteException; {:try_start_515 .. :try_end_52c} :catch_52e
 
@@ -4517,7 +4517,7 @@
     move-result-object v2
 
     .line 1641
-    sget-object v3, Lcom/android/internal/telephony/CommandException$Error;->CC_CALL_HOLD_FAILED_CAUSED_BY_TERMINATED:Lcom/android/internal/telephony/CommandException$Error;
+    const/4 v3, 0x0
 
     .line 1640
     if-ne v2, v3, :cond_6f9
@@ -5715,7 +5715,7 @@
 
     .line 1863
     .local v15, "cat":I
-    invoke-static {v15}, Landroid/telephony/PhoneNumberUtils;->setSpecificEccCategory(I)V
+    invoke-static {v15}, Lcom/mediatek/ims/compat/ImsCompat;->setSpecificEccCategory(I)V
     :try_end_ae0
     .catch Ljava/lang/NumberFormatException; {:try_start_ad1 .. :try_end_ae0} :catch_aec
 

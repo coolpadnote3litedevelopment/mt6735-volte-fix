@@ -2159,3 +2159,13 @@
     .restart local v0    # "reason":Lcom/android/ims/ImsReasonInfo;
     goto :goto_50
 .end method
+
+.method public queryCFForServiceClass(ILjava/lang/String;I)I
+    .registers 5
+
+    invoke-virtual {p0, p1, p2}, Lcom/mediatek/ims/ImsUtStub;->queryCallForward(ILjava/lang/String;)I
+
+    move-result v0
+
+    return v0
+.end method

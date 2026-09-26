@@ -3022,7 +3022,7 @@
     invoke-virtual {v3, p3}, Lcom/mediatek/simservs/client/SimServs;->setIntendedId(Ljava/lang/String;)V
 
     .line 453
-    invoke-static {p6}, Landroid/telephony/SubscriptionManager;->getSubIdUsingPhoneId(I)I
+    invoke-static {p6}, Lcom/mediatek/ims/compat/ImsCompat;->getSubIdUsingPhoneId(I)I
 
     move-result v1
 

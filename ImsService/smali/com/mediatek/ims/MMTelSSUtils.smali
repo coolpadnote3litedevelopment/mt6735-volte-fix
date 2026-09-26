@@ -1413,7 +1413,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/android/ims/ImsManager;->getImsRegInfo()Z
+    invoke-static {v3}, Lcom/mediatek/ims/compat/ImsCompat;->getImsRegInfo(Lcom/android/ims/ImsManager;)Z
 
     move-result v3
 
@@ -1620,7 +1620,7 @@
     invoke-static {v7, v8}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 279
-    invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubIdUsingPhoneId(I)I
+    invoke-static {p0}, Lcom/mediatek/ims/compat/ImsCompat;->getSubIdUsingPhoneId(I)I
 
     move-result v6
 
@@ -2315,7 +2315,7 @@
     invoke-static {v8, v9}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 339
-    invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubIdUsingPhoneId(I)I
+    invoke-static {p0}, Lcom/mediatek/ims/compat/ImsCompat;->getSubIdUsingPhoneId(I)I
 
     move-result v6
 
@@ -2469,7 +2469,7 @@
 
     .line 375
     .local v7, "telephonyManager":Landroid/telephony/TelephonyManager;
-    invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubIdUsingPhoneId(I)I
+    invoke-static {p0}, Lcom/mediatek/ims/compat/ImsCompat;->getSubIdUsingPhoneId(I)I
 
     move-result v8
 
@@ -2597,7 +2597,7 @@
 
     .line 941
     :cond_12
-    invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubIdUsingPhoneId(I)I
+    invoke-static {p0}, Lcom/mediatek/ims/compat/ImsCompat;->getSubIdUsingPhoneId(I)I
 
     move-result v1
 
@@ -2651,7 +2651,7 @@
 
     .prologue
     .line 930
-    invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubIdUsingPhoneId(I)I
+    invoke-static {p0}, Lcom/mediatek/ims/compat/ImsCompat;->getSubIdUsingPhoneId(I)I
 
     move-result v1
 
@@ -2757,7 +2757,7 @@
 
     .line 697
     :cond_12
-    invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubIdUsingPhoneId(I)I
+    invoke-static {p0}, Lcom/mediatek/ims/compat/ImsCompat;->getSubIdUsingPhoneId(I)I
 
     move-result v1
 
@@ -2832,7 +2832,7 @@
 
     .line 708
     :cond_12
-    invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubIdUsingPhoneId(I)I
+    invoke-static {p0}, Lcom/mediatek/ims/compat/ImsCompat;->getSubIdUsingPhoneId(I)I
 
     move-result v2
 
@@ -2932,7 +2932,7 @@
 
     .line 721
     :cond_12
-    invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubIdUsingPhoneId(I)I
+    invoke-static {p0}, Lcom/mediatek/ims/compat/ImsCompat;->getSubIdUsingPhoneId(I)I
 
     move-result v2
 
@@ -3032,7 +3032,7 @@
 
     .line 734
     :cond_12
-    invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubIdUsingPhoneId(I)I
+    invoke-static {p0}, Lcom/mediatek/ims/compat/ImsCompat;->getSubIdUsingPhoneId(I)I
 
     move-result v2
 
@@ -3132,7 +3132,7 @@
 
     .line 747
     :cond_12
-    invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubIdUsingPhoneId(I)I
+    invoke-static {p0}, Lcom/mediatek/ims/compat/ImsCompat;->getSubIdUsingPhoneId(I)I
 
     move-result v2
 
@@ -3232,7 +3232,7 @@
 
     .line 760
     :cond_12
-    invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubIdUsingPhoneId(I)I
+    invoke-static {p0}, Lcom/mediatek/ims/compat/ImsCompat;->getSubIdUsingPhoneId(I)I
 
     move-result v1
 
@@ -3307,7 +3307,7 @@
 
     .line 771
     :cond_12
-    invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubIdUsingPhoneId(I)I
+    invoke-static {p0}, Lcom/mediatek/ims/compat/ImsCompat;->getSubIdUsingPhoneId(I)I
 
     move-result v1
 
@@ -3382,7 +3382,7 @@
 
     .line 826
     :cond_12
-    invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubIdUsingPhoneId(I)I
+    invoke-static {p0}, Lcom/mediatek/ims/compat/ImsCompat;->getSubIdUsingPhoneId(I)I
 
     move-result v1
 
@@ -3457,7 +3457,7 @@
 
     .line 782
     :cond_12
-    invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubIdUsingPhoneId(I)I
+    invoke-static {p0}, Lcom/mediatek/ims/compat/ImsCompat;->getSubIdUsingPhoneId(I)I
 
     move-result v1
 
@@ -3532,7 +3532,7 @@
 
     .line 837
     :cond_12
-    invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubIdUsingPhoneId(I)I
+    invoke-static {p0}, Lcom/mediatek/ims/compat/ImsCompat;->getSubIdUsingPhoneId(I)I
 
     move-result v1
 
@@ -3607,7 +3607,7 @@
 
     .line 848
     :cond_12
-    invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubIdUsingPhoneId(I)I
+    invoke-static {p0}, Lcom/mediatek/ims/compat/ImsCompat;->getSubIdUsingPhoneId(I)I
 
     move-result v1
 
@@ -3682,7 +3682,7 @@
 
     .line 859
     :cond_12
-    invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubIdUsingPhoneId(I)I
+    invoke-static {p0}, Lcom/mediatek/ims/compat/ImsCompat;->getSubIdUsingPhoneId(I)I
 
     move-result v1
 
@@ -3757,7 +3757,7 @@
 
     .line 793
     :cond_12
-    invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubIdUsingPhoneId(I)I
+    invoke-static {p0}, Lcom/mediatek/ims/compat/ImsCompat;->getSubIdUsingPhoneId(I)I
 
     move-result v1
 
@@ -3832,7 +3832,7 @@
 
     .line 804
     :cond_12
-    invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubIdUsingPhoneId(I)I
+    invoke-static {p0}, Lcom/mediatek/ims/compat/ImsCompat;->getSubIdUsingPhoneId(I)I
 
     move-result v1
 
@@ -3907,7 +3907,7 @@
 
     .line 815
     :cond_12
-    invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubIdUsingPhoneId(I)I
+    invoke-static {p0}, Lcom/mediatek/ims/compat/ImsCompat;->getSubIdUsingPhoneId(I)I
 
     move-result v1
 
@@ -3982,7 +3982,7 @@
 
     .line 870
     :cond_12
-    invoke-static {p0}, Landroid/telephony/SubscriptionManager;->getSubIdUsingPhoneId(I)I
+    invoke-static {p0}, Lcom/mediatek/ims/compat/ImsCompat;->getSubIdUsingPhoneId(I)I
 
     move-result v1
 

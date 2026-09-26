@@ -269,7 +269,7 @@
 
     iget-object v7, p0, Lcom/mediatek/ims/ImsCallSessionProxy$1;->mHostInfo:Landroid/os/Bundle;
 
-    invoke-virtual {v5, v6, v7}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v5, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 789
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -376,7 +376,7 @@
     :cond_7a
     iget-object v5, p0, Lcom/mediatek/ims/ImsCallSessionProxy$1;->mParticipants:Ljava/util/LinkedHashMap;
 
-    invoke-virtual {v5, v3, v4}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v5, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 800
     const-string/jumbo v5, "ImsCallSessionProxy"
@@ -777,7 +777,7 @@
 
     .line 842
     .local v2, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Landroid/os/Bundle;>;"
-    iget-object v9, v0, Lcom/android/ims/ImsConferenceState;->mParticipants:Ljava/util/LinkedHashMap;
+    iget-object v9, v0, Lcom/android/ims/ImsConferenceState;->mParticipants:Ljava/util/HashMap;
 
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -791,7 +791,7 @@
 
     check-cast v8, Landroid/os/Bundle;
 
-    invoke-virtual {v9, v7, v8}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v9, v7, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 843
     const-string/jumbo v8, "ImsCallSessionProxy"
@@ -853,13 +853,13 @@
 
     .line 848
     .local v5, "userInfo":Landroid/os/Bundle;
-    iget-object v7, v0, Lcom/android/ims/ImsConferenceState;->mParticipants:Ljava/util/LinkedHashMap;
+    iget-object v7, v0, Lcom/android/ims/ImsConferenceState;->mParticipants:Ljava/util/HashMap;
 
     invoke-static {v4}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v8
 
-    invoke-virtual {v7, v8, v5}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v7, v8, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 849
     const-string/jumbo v7, "ImsCallSessionProxy"
@@ -992,7 +992,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v3, v1, v0}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 749
     return-object v2
@@ -1294,7 +1294,7 @@
     :cond_95
     iget-object v6, p0, Lcom/mediatek/ims/ImsCallSessionProxy$1;->mParticipants:Ljava/util/LinkedHashMap;
 
-    invoke-virtual {v6, v4, v5}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v6, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 826
     const-string/jumbo v6, "ImsCallSessionProxy"

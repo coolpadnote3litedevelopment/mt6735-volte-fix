@@ -502,7 +502,7 @@
 
     move/from16 v2, v21
 
-    invoke-interface {v5, v0, v1, v2}, Lcom/android/ims/internal/IImsConfig;->setImsCapability(ZZZ)V
+    invoke-static {v5, v0, v1, v2}, Lcom/mediatek/ims/compat/ImsCompat;->setImsCapability(Lcom/android/ims/internal/IImsConfig;ZZZ)V
     :try_end_19e
     .catch Landroid/os/RemoteException; {:try_start_17b .. :try_end_19e} :catch_1a0
 
@@ -885,7 +885,7 @@
 
     move/from16 v2, v18
 
-    invoke-interface {v5, v0, v1, v2}, Lcom/android/ims/internal/IImsConfig;->setImsCapability(ZZZ)V
+    invoke-static {v5, v0, v1, v2}, Lcom/mediatek/ims/compat/ImsCompat;->setImsCapability(Lcom/android/ims/internal/IImsConfig;ZZZ)V
 
     .line 270
     const/16 v19, 0x1

@@ -2636,7 +2636,7 @@
     .line 555
     move/from16 v0, v16
 
-    invoke-interface {v14, v15, v0, v7}, Lcom/android/ims/internal/IImsUtListener;->utConfigurationCallForwardInTimeSlotQueried(Lcom/android/ims/internal/IImsUt;I[Lcom/android/ims/ImsCallForwardInfoEx;)V
+    invoke-static {v14, v15, v0, v7}, Lcom/mediatek/ims/compat/ImsCompat;->utConfigurationCallForwardInTimeSlotQueried(Lcom/android/ims/internal/IImsUtListener;Lcom/android/ims/internal/IImsUt;I[Lcom/android/ims/ImsCallForwardInfoEx;)V
     :try_end_897
     .catch Landroid/os/RemoteException; {:try_start_880 .. :try_end_897} :catch_899
 

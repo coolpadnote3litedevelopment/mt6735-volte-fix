@@ -976,7 +976,7 @@
 
     iget-object v1, v1, Lcom/mediatek/ims/MoCallInfo;->mCallee:Ljava/lang/String;
 
-    invoke-static {v1}, Landroid/telephony/PhoneNumberUtils;->getServiceCategoryFromEcc(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/mediatek/ims/compat/ImsCompat;->getServiceCategoryFromEcc(Ljava/lang/String;)I
 
     move-result v0
 

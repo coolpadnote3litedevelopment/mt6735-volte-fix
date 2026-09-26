@@ -336,7 +336,7 @@
 
     .line 249
     .local v0, "connectivityManager":Landroid/net/ConnectivityManager;
-    invoke-static {p1}, Landroid/telephony/SubscriptionManager;->getSubIdUsingPhoneId(I)I
+    invoke-static {p1}, Lcom/mediatek/ims/compat/ImsCompat;->getSubIdUsingPhoneId(I)I
 
     move-result v3
 
