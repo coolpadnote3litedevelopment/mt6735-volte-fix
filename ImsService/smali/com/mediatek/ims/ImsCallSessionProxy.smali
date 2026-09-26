@@ -3387,6 +3387,18 @@
     .param p2, "profile"    # Lcom/android/ims/ImsCallProfile;
 
     .prologue
+    iget-object v0, p0, Lcom/mediatek/ims/ImsCallSessionProxy;->mCallProfile:Lcom/android/ims/ImsCallProfile;
+
+    const-string/jumbo v1, "oi"
+
+    invoke-virtual {v0, v1, p1}, Lcom/android/ims/ImsCallProfile;->setCallExtra(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string/jumbo v1, "oir"
+
+    const/4 v2, 0x2
+
+    invoke-virtual {v0, v1, v2}, Lcom/android/ims/ImsCallProfile;->setCallExtraInt(Ljava/lang/String;I)V
+
     const/4 v11, 0x2
 
     const/4 v10, 0x1
