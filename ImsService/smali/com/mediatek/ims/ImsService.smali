@@ -81,6 +81,8 @@
 
 
 # instance fields
+.field private mImsRequested:Z
+
 .field private mActivePhoneId:I
 
 .field private final mBroadcastReceiver:Landroid/content/BroadcastReceiver;
@@ -2908,6 +2910,10 @@
 
     invoke-virtual {v0, v1}, Lcom/mediatek/ims/ImsRILAdapter;->turnOffIms(Landroid/os/Message;)V
 
+    const/4 v1, 0x0
+
+    iput-boolean v1, p0, Lcom/mediatek/ims/ImsService;->mImsRequested:Z
+
     return-void
 .end method
 
@@ -2927,6 +2933,10 @@
 
     invoke-virtual {v0, v1}, Lcom/mediatek/ims/ImsRILAdapter;->turnOnIms(Landroid/os/Message;)V
 
+    const/4 v1, 0x1
+
+    iput-boolean v1, p0, Lcom/mediatek/ims/ImsService;->mImsRequested:Z
+
     return-void
 .end method
 
@@ -2936,6 +2946,19 @@
     .param p2, "phoneId"    # I
 
     .prologue
+    if-eqz p1, :cond_ims_radio_on
+
+    iget-boolean v0, p0, Lcom/mediatek/ims/ImsService;->mImsRequested:Z
+
+    if-eqz v0, :cond_ims_radio_on
+
+    iget-object v0, p0, Lcom/mediatek/ims/ImsService;->mImsRILAdapter:Lcom/mediatek/ims/ImsRILAdapter;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/mediatek/ims/ImsRILAdapter;->turnOnIms(Landroid/os/Message;)V
+
+    :cond_ims_radio_on
     .line 477
     const-string/jumbo v1, "ImsService"
 
