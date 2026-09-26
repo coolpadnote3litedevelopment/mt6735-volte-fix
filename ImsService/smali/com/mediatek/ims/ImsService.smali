@@ -1925,148 +1925,33 @@
 .end method
 
 .method private sendIncomingCallIndication(Landroid/os/AsyncResult;)V
-    .registers 11
+    .registers 7
     .param p1, "ar"    # Landroid/os/AsyncResult;
 
-    .prologue
-    .line 710
-    iget-object v6, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
+    iget-object v0, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
-    check-cast v6, [Ljava/lang/String;
+    check-cast v0, [Ljava/lang/String;
 
-    const/4 v7, 0x0
+    const/4 v1, 0x0
 
-    aget-object v0, v6, v7
+    aget-object v1, v0, v1
 
-    .line 711
-    .local v0, "callId":Ljava/lang/String;
-    iget-object v6, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
+    const/4 v2, 0x1
 
-    check-cast v6, [Ljava/lang/String;
+    aget-object v2, v0, v2
 
-    const/4 v7, 0x1
+    const/4 v3, 0x4
 
-    aget-object v2, v6, v7
+    aget-object v3, v0, v3
 
-    .line 712
-    .local v2, "dialString":Ljava/lang/String;
-    iget-object v6, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
+    invoke-static {v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    check-cast v6, [Ljava/lang/String;
+    move-result v3
 
-    const/4 v7, 0x3
+    const/4 v4, 0x1
 
-    aget-object v1, v6, v7
+    invoke-virtual {p0, v1, v2, v3, v4}, Lcom/mediatek/ims/ImsService;->setCallIndication(Ljava/lang/String;Ljava/lang/String;IZ)V
 
-    .line 713
-    .local v1, "callMode":Ljava/lang/String;
-    iget-object v6, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
-
-    check-cast v6, [Ljava/lang/String;
-
-    const/4 v7, 0x4
-
-    aget-object v4, v6, v7
-
-    .line 714
-    .local v4, "seqNum":Ljava/lang/String;
-    const/4 v5, 0x1
-
-    .line 716
-    .local v5, "serviceId":I
-    const-string/jumbo v6, "ImsService"
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string/jumbo v8, "IMS: sendIncomingCallIndication() call_id = "
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    .line 717
-    const-string/jumbo v8, " dialString = "
-
-    .line 716
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    .line 717
-    const-string/jumbo v8, " seqNum = "
-
-    .line 716
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-static {v6, v7}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 719
-    new-instance v3, Landroid/content/Intent;
-
-    const-string/jumbo v6, "com.android.ims.IMS_INCOMING_CALL_INDICATION"
-
-    invoke-direct {v3, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    .line 720
-    .local v3, "intent":Landroid/content/Intent;
-    const-string/jumbo v6, "android:imsCallID"
-
-    invoke-virtual {v3, v6, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 721
-    const-string/jumbo v6, "android:imsDialString"
-
-    invoke-virtual {v3, v6, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 722
-    const-string/jumbo v6, "android:imsCallMode"
-
-    invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v7
-
-    invoke-virtual {v3, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 723
-    const-string/jumbo v6, "android:imsSeqNum"
-
-    invoke-static {v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v7
-
-    invoke-virtual {v3, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 724
-    const-string/jumbo v6, "android:imsServiceId"
-
-    invoke-virtual {v3, v6, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 725
-    iget-object v6, p0, Lcom/mediatek/ims/ImsService;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v6, v3}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
-
-    .line 708
     return-void
 .end method
 
