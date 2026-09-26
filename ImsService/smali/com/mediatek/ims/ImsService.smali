@@ -3008,168 +3008,40 @@
 .end method
 
 .method public turnOffIms(I)V
-    .registers 5
+    .registers 4
     .param p1, "phoneId"    # I
 
-    .prologue
-    .line 444
-    const-string/jumbo v0, "ImsService"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string/jumbo v2, "turnOffIms, mActivePhoneId = "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget v2, p0, Lcom/mediatek/ims/ImsService;->mActivePhoneId:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    .line 445
-    const-string/jumbo v2, " phoneId = "
-
-    .line 444
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 446
     invoke-direct {p0}, Lcom/mediatek/ims/ImsService;->getMainCapabilityPhoneId()I
 
-    move-result p1
+    move-result v0
 
-    .line 447
-    const-string/jumbo v0, "ImsService"
+    iput v0, p0, Lcom/mediatek/ims/ImsService;->mActivePhoneId:I
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lcom/mediatek/ims/ImsService;->mImsRILAdapter:Lcom/mediatek/ims/ImsRILAdapter;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 v1, 0x0
 
-    const-string/jumbo v2, "turnOffIms, MainCapabilityPhoneId = "
+    invoke-virtual {v0, v1}, Lcom/mediatek/ims/ImsRILAdapter;->turnOffIms(Landroid/os/Message;)V
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 449
-    iget v0, p0, Lcom/mediatek/ims/ImsService;->mActivePhoneId:I
-
-    if-eq v0, p1, :cond_4b
-
-    .line 450
-    iput p1, p0, Lcom/mediatek/ims/ImsService;->mActivePhoneId:I
-
-    .line 443
-    :cond_4b
     return-void
 .end method
 
 .method public turnOnIms(I)V
-    .registers 5
+    .registers 4
     .param p1, "phoneId"    # I
 
-    .prologue
-    .line 428
-    const-string/jumbo v0, "ImsService"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string/jumbo v2, "turnOnIms, mActivePhoneId = "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget v2, p0, Lcom/mediatek/ims/ImsService;->mActivePhoneId:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    .line 429
-    const-string/jumbo v2, " phoneId = "
-
-    .line 428
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 430
     invoke-direct {p0}, Lcom/mediatek/ims/ImsService;->getMainCapabilityPhoneId()I
 
-    move-result p1
+    move-result v0
 
-    .line 431
-    const-string/jumbo v0, "ImsService"
+    iput v0, p0, Lcom/mediatek/ims/ImsService;->mActivePhoneId:I
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lcom/mediatek/ims/ImsService;->mImsRILAdapter:Lcom/mediatek/ims/ImsRILAdapter;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 v1, 0x0
 
-    const-string/jumbo v2, "turnOnIms, MainCapabilityPhoneId = "
+    invoke-virtual {v0, v1}, Lcom/mediatek/ims/ImsRILAdapter;->turnOnIms(Landroid/os/Message;)V
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 433
-    iget v0, p0, Lcom/mediatek/ims/ImsService;->mActivePhoneId:I
-
-    if-eq v0, p1, :cond_4b
-
-    .line 434
-    iput p1, p0, Lcom/mediatek/ims/ImsService;->mActivePhoneId:I
-
-    .line 427
-    :cond_4b
     return-void
 .end method
 
