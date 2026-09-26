@@ -2738,6 +2738,12 @@
 
     invoke-direct {v2}, Lcom/android/ims/ImsCallProfile;-><init>()V
 
+    const-string/jumbo v0, "oir"
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v2, v0, v1}, Lcom/android/ims/ImsCallProfile;->setCallExtraInt(Ljava/lang/String;I)V
+
     .line 628
     .local v2, "imsCallProfile":Lcom/android/ims/ImsCallProfile;
     if-eqz p2, :cond_13
