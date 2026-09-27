@@ -1,7 +1,8 @@
 # mt6735-volte-fix
 
-VoLTE for MT6735 phones running CyanogenMod 14.1 with the MediaTek
-Android 6.0 IMS blobs. The `cm-13.0` branch has the CyanogenMod 13 version. Tested on the Coolpad Note 3 Lite (CP8298_I00)
+VoLTE for MT6735 phones running LineageOS 15.1 with the MediaTek
+Android 6.0 IMS blobs. The `cm-13.0` and `cm-14.1` branches have the
+CyanogenMod 13 and 14.1 versions. Tested on the Coolpad Note 3 Lite (CP8298_I00)
 on Jio: IMS registration, incoming and outgoing calls with audio, and
 receiving SMS over IMS.
 
@@ -22,6 +23,8 @@ was changed and why:
 - Send the call profile when an outgoing call starts
 - Fall back to cause 0 for unknown IMS PDN fail causes
 - Only hand incoming calls to the active SIM
+- Pass `addRegistrationListener` on to `setRegistrationListener`; Oreo
+  registers its listener there and hands `open()` a stub
 
 `build.sh` rebuilds `ImsService.apk` from this tree. It has to be signed
 with the ROM's platform key.
