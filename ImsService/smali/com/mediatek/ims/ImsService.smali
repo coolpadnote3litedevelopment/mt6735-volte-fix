@@ -3211,6 +3211,7 @@
 
 .method public addRegistrationListener(IILcom/android/ims/internal/IImsRegistrationListener;)V
     .registers 4
+    invoke-virtual {p0, p1, p3}, Lcom/mediatek/ims/ImsService;->setRegistrationListener(ILcom/android/ims/internal/IImsRegistrationListener;)V
     return-void
 .end method
 
