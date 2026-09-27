@@ -2527,6 +2527,15 @@
     .param p2, "callId"    # Ljava/lang/String;
 
     .prologue
+    const/4 v0, 0x1
+
+    if-eq p1, v0, :cond_pending_active_service
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :cond_pending_active_service
     const/4 v3, 0x0
 
     .line 543
@@ -2678,6 +2687,15 @@
     .param p4, "listener"    # Lcom/android/ims/internal/IImsRegistrationListener;
 
     .prologue
+    iget v0, p0, Lcom/mediatek/ims/ImsService;->mActivePhoneId:I
+
+    if-eq p1, v0, :cond_open_active_phone
+
+    add-int/lit8 v0, p1, 0x64
+
+    return v0
+
+    :cond_open_active_phone
     const/4 v3, 0x1
 
     .line 397
