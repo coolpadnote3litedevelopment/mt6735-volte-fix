@@ -3190,3 +3190,14 @@
 
     goto :goto_97
 .end method
+
+.method public addRegistrationListener(IILcom/android/ims/internal/IImsRegistrationListener;)V
+    .registers 4
+    return-void
+.end method
+
+.method public getMultiEndpointInterface(I)Lcom/android/ims/internal/IImsMultiEndpoint;
+    .registers 3
+    const/4 v0, 0x0
+    return-object v0
+.end method
