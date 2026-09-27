@@ -826,6 +826,12 @@
     .line 217
     iput-object p2, p0, Lcom/mediatek/ims/ImsCallSessionProxy;->mCallProfile:Lcom/android/ims/ImsCallProfile;
 
+    const-string/jumbo v3, "oir"
+
+    const/4 v4, 0x2
+
+    invoke-virtual {p2, v3, v4}, Lcom/android/ims/ImsCallProfile;->setCallExtraInt(Ljava/lang/String;I)V
+
     .line 218
     new-instance v3, Lcom/android/ims/ImsCallProfile;
 
