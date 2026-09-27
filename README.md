@@ -21,6 +21,9 @@ was changed and why:
 `build.sh` rebuilds `ImsService.apk` from this tree. It has to be signed
 with the ROM's platform key.
 
+The device tree pins it by sha1 in `proprietary-files.txt`, so update the
+pin when a new build goes into the vendor repo.
+
 ## Device, common and vendor changes
 
 VoLTE also needs the native IMS stack, the VT service, init, sepolicy,
