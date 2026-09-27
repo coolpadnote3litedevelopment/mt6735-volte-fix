@@ -1729,9 +1729,18 @@
 
     check-cast v5, Ljava/lang/Integer;
 
+    if-eqz v5, :cond_unknown_fail_cause_1
+
     invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
 
     move-result v5
+
+    goto :goto_fail_cause_1
+
+    :cond_unknown_fail_cause_1
+    const/4 v5, 0x0
+
+    :goto_fail_cause_1
 
     iget-object v7, v1, Lcom/mediatek/ims/internal/DataDispatcher$ApnStatus;->ifaceName:Ljava/lang/String;
 
@@ -1762,9 +1771,18 @@
 
     check-cast v5, Ljava/lang/Integer;
 
+    if-eqz v5, :cond_unknown_fail_cause_2
+
     invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
 
     move-result v5
+
+    goto :goto_fail_cause_2
+
+    :cond_unknown_fail_cause_2
+    const/4 v5, 0x0
+
+    :goto_fail_cause_2
 
     const/16 v7, 0x1388
 
@@ -1816,9 +1834,18 @@
 
     check-cast v5, Ljava/lang/Integer;
 
+    if-eqz v5, :cond_unknown_fail_cause_3
+
     invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
 
     move-result v5
+
+    goto :goto_fail_cause_3
+
+    :cond_unknown_fail_cause_3
+    const/4 v5, 0x0
+
+    :goto_fail_cause_3
 
     iget-object v7, v1, Lcom/mediatek/ims/internal/DataDispatcher$ApnStatus;->ifaceName:Ljava/lang/String;
 
