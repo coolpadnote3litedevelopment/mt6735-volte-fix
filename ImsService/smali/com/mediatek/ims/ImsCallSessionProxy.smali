@@ -3405,6 +3405,14 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/ims/ImsCallProfile;->setCallExtraInt(Ljava/lang/String;I)V
 
+    iget-object v1, p0, Lcom/mediatek/ims/ImsCallSessionProxy;->mListener:Lcom/android/ims/internal/IImsCallSessionListener;
+
+    if-eqz v1, :cond_start_profile_sent
+
+    invoke-interface {v1, p0, v0}, Lcom/android/ims/internal/IImsCallSessionListener;->callSessionUpdated(Lcom/android/ims/internal/IImsCallSession;Lcom/android/ims/ImsCallProfile;)V
+
+    :cond_start_profile_sent
+
     const/4 v11, 0x2
 
     const/4 v10, 0x1
