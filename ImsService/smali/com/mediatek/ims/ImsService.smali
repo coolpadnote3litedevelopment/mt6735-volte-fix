@@ -119,6 +119,8 @@
 
 .field private mListener:Lcom/android/ims/internal/IImsRegistrationListener;
 
+.field private mAddedListener:Lcom/android/ims/internal/IImsRegistrationListener;
+
 .field private mLockObj:Ljava/lang/Object;
 
 .field private mNotificationController:Lcom/mediatek/ims/ImsNotificationController;
@@ -2718,6 +2720,13 @@
 
     .line 402
     :cond_11
+    iget-object v2, p0, Lcom/mediatek/ims/ImsService;->mAddedListener:Lcom/android/ims/internal/IImsRegistrationListener;
+
+    if-eqz v2, :cond_open_listener
+
+    move-object p4, v2
+
+    :cond_open_listener
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0, p4}, Lcom/mediatek/ims/ImsService;->setRegistrationListener(ILcom/android/ims/internal/IImsRegistrationListener;)V
@@ -3211,6 +3220,8 @@
 
 .method public addRegistrationListener(IILcom/android/ims/internal/IImsRegistrationListener;)V
     .registers 4
+    iput-object p3, p0, Lcom/mediatek/ims/ImsService;->mAddedListener:Lcom/android/ims/internal/IImsRegistrationListener;
+
     invoke-virtual {p0, p1, p3}, Lcom/mediatek/ims/ImsService;->setRegistrationListener(ILcom/android/ims/internal/IImsRegistrationListener;)V
     return-void
 .end method
